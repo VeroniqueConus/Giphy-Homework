@@ -51,14 +51,14 @@ function getGifs() {
             //Create a loop to bring a rating and text into the div that holds the GIF
             for (var i=0; i < results.length; i++) {
 
-                var gifDiv = $("<div>" );
+                var gifDiv = $('<div class="item">'); //don't understand why this works but doesn't with ""
                 var rating = results[i].rating;
                 var p = $("<p>").text("Rating: " + rating);
                 var giphyImg = $("<img>");
                 giphyImg.attr("src", results[i].images.fixed_height_still.url);
                 giphyImg.attr("data-still", results[i].images.fixed_height_still.url);
                 giphyImg.attr("data-animate", results[i].images.fixed_height.url);
-                giphyImg.attr("data-state", results[i].images.fixed_height_still.url);
+                giphyImg.attr("data-state", "still");
 
                 gifDiv.append(giphyImg)
                 gifDiv.append(p)
@@ -76,7 +76,7 @@ function getGifs() {
                     $(this).attr("data-state", "animate");
                 } else {
                     $(this).attr("src", $(this).data("still"));
-                    $(this).attr("data_state", "still");
+                    $(this).attr("data-state", "still");
                 }
             });
             });
