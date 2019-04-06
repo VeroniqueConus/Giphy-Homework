@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GIF Homework</title>
+
+    <link rel="stylesheet" type="text/css" src="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="panel" id="startingButtons">
+        <div class="panel-heading">
+            <h3 class="panel name">GIF Homework</h3>
+        </div>
+        <div id="addButton" class="panel-body">
+        </div>
+        <p id="text">Click the GIF to start or stop animation!</p>
+    </div>
+    <form id="gifForm">
+        <label form="gifInput">Add a button!</label>
+        <input type="text" id="gif-input">
+        <br>
+        <input id="getGifs" type="submit" value="Add">
+    </form>
+    <div style="background:transparent !important" id="gifsAppearHere" class="jumbotron myJumbotron">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script> var queryURL="https://api.giphy.com/v1/gifs/&api_key=Zr9700pOmpA44mJSPmhkDZFXmLkzWOk9&limit=10"
+    </script>
+    <script src="assets/javascript/app.js"></script>
+
+  </body>
+</html>
