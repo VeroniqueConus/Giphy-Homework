@@ -53,7 +53,7 @@ function getGifs() {
 
                 var gifDiv = $("<div>" );
                 var rating = results[i].rating;
-                var p = $("<p>").text("Rating: " + rating),
+                var p = $("<p>").text("Rating: " + rating);
                 var giphyImg = $("<img>");
                 giphyImg.attr("src", results[i].images.fixed_height_still.url);
                 giphyImg.attr("data-still", results[i].images.fixed_height_still.url);
@@ -80,6 +80,5 @@ function getGifs() {
                 }
             });
             });
-        }
     });
 }
